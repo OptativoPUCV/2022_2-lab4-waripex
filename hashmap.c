@@ -61,7 +61,11 @@ HashMap * createMap(long capacity) {
 }
 
 void eraseMap(HashMap * map,  char * key) {    
-
+  Pair *borrarPar =  searchMap(map,key);
+  if(borrarPar){
+    borrarPar -> key = NULL;
+    map -> size --;
+  }
 
 }
 
