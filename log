@@ -80,3 +80,9 @@ hashmap.c:59:11: error: variable ‘prevBuckets’ set but not used [-Werror=unu
 cc1: all warnings being treated as errors
 Compilation failed
 c1dc7b0
+Sun 11 Sep 2022 04:25:19 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  12|1
+total_score: 60/70
+d5a308d
