@@ -10,7 +10,7 @@ typedef struct HashMap HashMap;
 int enlarge_called=0;
 
 struct HashMap {
-    Pair ** buckets;
+    Pair ** buckets;// tiene doble * porque es un puntero de punteros
     long size; //cantidad de datos/pairs en la tabla
     long capacity; //capacidad de la tabla
     long current; //indice del ultimo dato accedido
@@ -52,8 +52,12 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
-
-    return NULL;
+  HashMap * nuevoMapa = (HashMap *)malloc(sizeof(HashMap));
+  nuevoMapa -> buckets = (pair **)calloc(capacity,sizeof(pair*));
+  nuevoMapa -> size = 0;
+  nuevoMapa -> capacity = capacity;
+  nuevoMapa -> current = -1;
+  return nuevoMapa;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
