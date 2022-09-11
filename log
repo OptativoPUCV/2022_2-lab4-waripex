@@ -52,3 +52,31 @@ Sun 11 Sep 2022 04:17:33 AM UTC:
  tests:  11|2
 total_score: 50/70
 cfb0ff7
+Sun 11 Sep 2022 04:25:00 AM UTC: 
+ hashmap.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:65:7: error: expected ‘(’ before ‘long’
+   65 |   for long i = 0; i < map->capacity/2;i++){
+      |       ^~~~
+      |       (
+hashmap.c:65:3: error: this ‘for’ clause does not guard... [-Werror=misleading-indentation]
+   65 |   for long i = 0; i < map->capacity/2;i++){
+      |   ^~~
+hashmap.c:65:19: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   65 |   for long i = 0; i < map->capacity/2;i++){
+      |                   ^
+hashmap.c:65:19: error: ‘i’ undeclared (first use in this function)
+hashmap.c:65:19: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:65:42: error: expected ‘;’ before ‘)’ token
+   65 |   for long i = 0; i < map->capacity/2;i++){
+      |                                          ^
+      |                                          ;
+hashmap.c:65:42: error: expected statement before ‘)’ token
+hashmap.c:59:11: error: variable ‘prevBuckets’ set but not used [-Werror=unused-but-set-variable]
+   59 |   Pair ** prevBuckets = map -> buckets;
+      |           ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c1dc7b0
