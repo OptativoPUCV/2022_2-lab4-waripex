@@ -13,3 +13,18 @@ hashmap.c:56:34: error: expected expression before ‘)’ token
       |                                  ^
 Compilation failed
 9b58ce1
+Sun 11 Sep 2022 03:38:54 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:58: error: ‘pair’ undeclared (first use in this function); did you mean ‘Pair’?
+   56 |   nuevoMapa -> buckets = (Pair **)calloc(capacity,sizeof(pair*));
+      |                                                          ^~~~
+      |                                                          Pair
+hashmap.c:56:58: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:56:63: error: expected expression before ‘)’ token
+   56 |   nuevoMapa -> buckets = (Pair **)calloc(capacity,sizeof(pair*));
+      |                                                               ^
+Compilation failed
+503f113
